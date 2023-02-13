@@ -42,9 +42,6 @@ public class LoginController {
 
         String username = null;
         Object principal = authentication.getPrincipal();
-        if (principal == null) {
-            username = "匿名";
-        }
         if (principal instanceof org.springframework.security.core.userdetails.UserDetails) {
             UserDetails userDetails = (UserDetails) principal;
             username = userDetails.getUsername();
