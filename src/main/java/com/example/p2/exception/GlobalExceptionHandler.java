@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 @RestControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(BadCredentialsException.class)
-    public GlobalErrorResponse badCredentialsExceptionHandler(final Exception e){
-        return new GlobalErrorResponse(403,e.getMessage());
+    public GlobalErrorResponse badCredentialsExceptionHandler(final Exception e) {
+        return new GlobalErrorResponse(403, e.getMessage());
 
     }
 
